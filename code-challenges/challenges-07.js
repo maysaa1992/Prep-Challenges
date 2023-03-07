@@ -24,7 +24,7 @@ const objLat = (obj) => {
     // write your code here
     // let fName=obj.firstName.charAt(0).toUpperCase()+ obj.firstName.slice(1)
     // let lName=obj.lastName.charAt(0).toUpperCase()+ obj.lastName.slice(1)
-    return `my name is ${obj.firstName.charAt(0).toUpperCase() + obj.firstName.slice(1)} ${obj.lastName.charAt(0).toUpperCase()+ obj.lastName.slice(1)} I am ${obj.age} YO, and I love ${obj.hobby}`
+    return `my name is ${obj.firstName.charAt(0).toUpperCase() + obj.firstName.slice(1)} ${obj.lastName.charAt(0).toUpperCase()+ obj.lastName.slice(1)} I am ${obj.age} YO, and I love ${obj.hobby}.`
 };
 // -------------------------------------------------------------------------------------------------------
 
@@ -90,53 +90,29 @@ const objLat = (obj) => {
 const cvFormatter = (arr) => {
     // write your code here
     let fullName = "";
-    let tName="";
     let newobj={};
     const fullNameArr=[];
-    var toSearch ="yearsOfExperience";
+
     for (let i=0; i<=arr.length;i++){
-    if (arr[i]["yearsOfExperience"] >1){
-        if (arr[i].hasOwnProperty("firstName")==true && arr[i].hasOwnProperty("lastName") == true )
+
+    if (arr[i].yearsOfExperience > 1){
+        if (arr[i].firstName !=null && arr[i].lastName !=null )
         {
-            fullName=arr[i]["firstName"]+" "+arr[i]["lastName"];
-            newobj.fullName;
-            if(arr[i].hasOwnProperty("tech")==true){
-                tName=arr[i]["tech"]
-                newobj.tName;
+            newobj.fullName = arr[i].firstName +" "+ arr[i].lastName;
+            newobj.tech=arr[i].tech;
+            fullNameArr.push(newobj);
+            }
+            else if (arr[i].lastName == null){
+                newobj.fullName = arr[i].firstName ;
+                newobj.tech=arr[i].tech;
+                fullNameArr.push(newobj);
             }
         }
-    }
-
-
-
-        
-    }
-
-
-
-    
-    
-    
+    }   
 
 };
 
 
-
-
-
-
-
-// var results = [];
-
-// var toSearch = "lo";
-
-// for(var i=0; i<objects.length; i++) {
-//   for(key in objects[i]) {
-//     if(objects[i][key].indexOf(toSearch)!=-1) {
-//       results.push(objects[i]);
-//     }
-//   }
-// }
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
