@@ -15,7 +15,7 @@
 //  }
 //
 //  Output: "my name is Ellie Jon I am 67 YO, and I love Gaming and Sleeping."
-
+//wshjwawgjWFG
 //  Note that:
 //  1- The text template is "my name is ** ** I am ** YO, and I love **."
 //  2- The first letters of the firstName and lastName should be capital letter
