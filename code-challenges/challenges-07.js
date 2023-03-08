@@ -90,29 +90,40 @@ const objLat = (obj) => {
 const cvFormatter = (arr) => {
     // write your code here
     let fullName = "";
-    let newobj={};
     const fullNameArr=[];
 
-    for (let i=0; i<=arr.length;i++){
-
-    if (arr[i].yearsOfExperience > 1){
-        if (arr[i].firstName !=null && arr[i].lastName !=null )
-        {
-            newobj.fullName = arr[i].firstName +" "+ arr[i].lastName;
-            newobj.tech=arr[i].tech;
-            fullNameArr.push(newobj);
-            }
-            else if (arr[i].lastName == null){
-                newobj.fullName = arr[i].firstName ;
+    for (let i=0; i<arr.length;i++){
+        let newobj={};
+        if (arr[i].yearsOfExperience > 1){
+            if (arr[i].firstName !=null && arr[i].lastName !=null )
+            {
+                newobj.fullName = arr[i].firstName +" "+ arr[i].lastName;
                 newobj.tech=arr[i].tech;
                 fullNameArr.push(newobj);
+                }
+                else if (arr[i].lastName == null){
+                    newobj.fullName = arr[i].firstName ;
+                    newobj.tech=arr[i].tech;
+                    fullNameArr.push(newobj);
+                }
             }
-        }
-    }   
+        }  
+    return(fullNameArr); 
 
 };
 
 
+// var results = [];
+
+// var toSearch = "lo";
+
+// for(var i=0; i<objects.length; i++) {
+//   for(key in objects[i]) {
+//     if(objects[i][key].indexOf(toSearch)!=-1) {
+//       results.push(objects[i]);
+//     }
+//   }
+// }
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
