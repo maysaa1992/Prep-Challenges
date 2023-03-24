@@ -80,22 +80,19 @@ const cvsFiltration = (arr) => {
     // write your code here
     const newarr=[];
     for (let i=0;i<arr.length;i++){
-        if(arr[i]. yearsOfExperience>4 )
+        let newobj={};
+        if(arr[i]. yearsOfExperience>4 ){
         if(arr[i].LastName !=null){
-        let fullName="fullName:"+ arr[i].firstName +" "+ arr[i].LastName;
-        let tech =arr[i].tech; 
-        newarr.push(fullName);
-        newarr.push(tech);
+        let fullNamee= arr[i].firstName +" "+ arr[i].LastName;
+        newobj.fullName =fullNamee; 
+        newobj.tech=arr[i].tech;
+        newarr.push(newobj);
         }
-        else{
-            let fullName="fullName:"+ arr[i].firstName 
-            let tech =arr[i].tech; 
-            newarr.push(fullName);
-            newarr.push(tech);
-            }
+        else {continue;}
+        }
     }
     
- 
+ return newarr;
 
 }
 // -------------------------------------------------------------------------------------------------------
@@ -113,11 +110,12 @@ const cvsFiltration = (arr) => {
 const vowelsFiltration = (arr) => {
     // write your code here
     const newarr=[];
-//     arr.filter(search)
-//     function search(str)
-//     let result = str.includes("a", "e", "i", "o","u");
-//     if(result==false)
-// newarr.push(str)
+    arr.filter((str)=>{
+        if(str.includes('a')==false && str.includes('e')==false && str.includes('i')==false && str.includes('o')==false && str.includes('u')==false)
+        {newarr.push(str)} 
+    })
+
+    return newarr;
 } 
 // -------------------------------------------------------------------------------------------------------
 
