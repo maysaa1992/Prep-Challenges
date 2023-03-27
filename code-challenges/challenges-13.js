@@ -114,16 +114,16 @@ return arr
 
 const statistics = (arr) => {
     // write your code here
-    let newobj={};
+    let res={};
     const newArr=[];
     arr.reduce((PObj, cObj) => {
-        if (PObj.votes_To === cObj.votes_To){newobj.obj1=2 }
+        if (PObj[votes_To] === cObj[votes_To]){res.jobj1=2 }
         else{
-            newobj.obj1=1
-            newobj.obj2=1
+            res.obj1=1
+            res.obj2=1
         } 
     })
-return newArr.push(newobj);
+return res
 }
 // -------------------------------------------------------------------------------------------------------
 
