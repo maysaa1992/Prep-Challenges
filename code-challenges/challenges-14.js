@@ -67,22 +67,27 @@ const LastWord_2 = (str) => {
 
 const replaceWords = (str) => {
     // write your code here
+
     const arr = str.split(' ');
+
     let indexOf_I=arr.indexOf("I")
-    arr.splice(indexOf_I, 1, 'We')
-
+  if(indexOf_I!=-1){ 
+      arr.splice(indexOf_I, 1, 'We')
+                   
+  }
+ 
     let indexOf_am=arr.indexOf("am")
+  if(indexOf_am !=-1){
     arr.splice(indexOf_am, 1, 'are')
-
-    let indexOf_was = arr.indexOf("was")
-    if(indexOf_was !=null){
-        arr.splice(indexOf_was, 1,'were')
-    }
-   
+  }
+    let indexOfwas = arr.indexOf("was")
+        if(indexOfwas != -1){
+        arr.splice(indexOfwas, 1,'were')
+        }
+  
 
 const newstr =arr.join(' ')
 return newstr;
-
 }
 // -------------------------------------------------------------------------------------------------------
 
