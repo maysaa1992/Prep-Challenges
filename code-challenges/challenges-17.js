@@ -13,19 +13,25 @@
 // Input: 50, 9
 // Output: [50, 41, 32, 23, 14, 5, -4, 5, 14, 23, 32, 41, 50]
 //
-const arr=[];
-const recursionPattern = (int1, int2) => {
-    // write your code here
 
+
+const recursionPattern = (int1, int2) => {
+    let n=0;
+    n++;
+const arr=[];
+    // write your code here
+    function inerfuntion (int1, int2){
+        arr.push(int1);
 if (int2===0){return arr.push(int1)}
-  else if(int1-int2>0){
-            return arr.push(int1,recursionPattern(int1-int2,int2) )
+  else if(int1-int2>0 && arr[n]>=arr[n-1]){
+      return inerfuntion(int1-int2,int2)
     }
-    else if(int1-int2<0){ 
-        if(int1+int2!=arr[0]){
-        return arr.push( int1,recursionPattern(int1+int2,int2) )
+    else if(int1-int2<0 && arr[n]<arr[n-1]){ 
+        if(int1+int2<=arr[0]){
+      return inerfuntion(int1+int2,int2)
     }
  }
+}
  return arr;
 }
 
