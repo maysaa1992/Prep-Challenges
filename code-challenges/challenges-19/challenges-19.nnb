@@ -1,0 +1,169 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "## Hacker Rank\n\nFor Thursdays you will be solving some selected challenges on HackerRank, please create an account if you don't have then\nFollow the links below:\nread them carefully and solve them then copy-paste your solution below in Code Block"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Required**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Append And Delete](https://www.hackerrank.com/challenges/append-and-delete/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+
+
+         function appendAndDelete(s, t, k) {
+    // Write your code here
+   let sArray = s.split("")
+    let tArray = t.split("")
+    let count = 0
+    for (let i = 0; i === count && i < s.length; i++) {
+        if (sArray[i] === tArray[i]) {
+            count++
+        }
+    }
+
+    let tCount = t.length - count
+    let sCount = s.length - count
+
+    let STKvar = k - (tCount + sCount)
+
+    if (tCount + sCount < k && t.length + s.length > k && STKvar % 2 !== 0) {
+        return "No"
+    } else if (tCount + sCount <= k) {
+        return "Yes"
+    } else {
+        return "No"
+    }
+}
+
+
+
+        },
+        {
+            "language": "javascript",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Optional**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Encryption](https://www.hackerrank.com/challenges/encryption/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+
+
+
+ const ceil = Math.ceil(Math.sqrt(s.length));
+    
+   let temp = s;
+   let array = [];
+      
+   while(temp) {
+        array = array.concat(temp.substring(0, ceil));
+        temp = temp.substring(ceil)
+   }
+
+   let result = [];
+  
+   for(let i = 0 ; i < ceil; i++) {
+        result = result.concat(
+            array.reduce((r, v) => {
+                return r + (v[i] || "")
+        }, "")
+    )
+   };
+   return result.join(' ');
+        }
+
+
+
+
+
+        {
+            "language": "javascript",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [The Time In Words](https://www.hackerrank.com/challenges/the-time-in-words/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                ""
+            ],
+            "outputs": []
+
+function timeInWords(h, m) {
+    // Write your code here
+      let numbers = [
+    'zero',
+    'one', 'two', 'three', 'four', 'five',
+    'six', 'seven', 'eight', 'nine', 'ten',
+    'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen',
+    'sixteen', 'seventeen', 'eightteen', 'nineteen', 'twenty',
+    'twenty one', 'twenty two', 'twenty three', 'twenty four', 'twenty five',
+    'twenty six', 'twenty seven', 'twenty eight', 'twenty nine'
+  ]
+
+  if (m === 0) {
+    return numbers[h] + " o' clock"
+  }
+
+  let result = ''
+
+  if (m % 30 === 0) {
+    result += 'half'
+  } else if (m % 15 === 0) {
+    result += 'quarter'
+  } else {
+    let minutes = m < 30 ? numbers[m] : numbers[60 - m]
+    result += minutes
+
+    result += m % 15 === 1 ? ' minute' : ' minutes'
+  }
+
+  if (m < 31) {
+    result += ' past '
+  } else {
+    result += ' to '
+    h++
+  }
+
+  result += numbers[h]
+
+  return result
+
+}
+
+
+
+        }
+    ]
+}
